@@ -1,0 +1,13 @@
+<?php
+
+require("ezproxyticket.php");
+
+
+$ezproxy = new EZproxyTicket("http://ezproxy.yourlib.org:2048", "shhhh!", "someuser");
+?>
+
+<a href="<?php echo($ezproxy->url("http://www.somedatabase.com")) ?>">
+    Some Database</a><br/>
+
+<a href="<?php echo($ezproxy->url("http://www.otherdb.com")) ?>">
+    Other Database</a><br/>
