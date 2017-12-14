@@ -1,6 +1,6 @@
 <?php
 
-require("ezproxyticket.php");
+require("Ezproxyticket.php");
 
 
 $ezproxy = new EZproxyTicket("http://ezproxy.yourlib.org:2048", "shhhh!", "someuser");
