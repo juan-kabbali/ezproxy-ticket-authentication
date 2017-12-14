@@ -15,13 +15,6 @@ class EZproxyTicket
 
     var $EZproxyStartingPointURL;
 
-    /**
-     * EZproxyTicket constructor. Inicialize the ezProxyStartingPointURL value
-     * @param $EZproxyServerURL
-     * @param $secret
-     * @param $user
-     * @param string $groups
-     */
     function EZproxyTicket($EZproxyServerURL, $secret, $user, $groups = "")
     {
         if (strcmp($secret, "") == 0) {
@@ -38,11 +31,6 @@ class EZproxyTicket
         $this->EZproxyStartingPointURL = $EZproxyServerURL . "/login?user=" . urlencode($user) . "&ticket=" . $EZproxyTicket;
     }
 
-    /**
-     * @param $url
-     * @return string entire url which contains all needed parameters to recognize the
-     * user as a valid one
-     */
     function URL($url)
     {
         return $this->EZproxyStartingPointURL . "&url=" . $url;
