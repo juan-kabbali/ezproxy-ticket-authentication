@@ -18,7 +18,7 @@ class EZproxyTicket
      * @param $user
      * @param string $groups
      */
-    function EZproxyTicket($EZproxyServerURL, $secret, $user, $groups = "")
+    public function __construct($EZproxyServerURL, $secret, $user, $groups = "")
     {
         if (strcmp($secret, "") == 0) {
             echo("EZproxyURLInit secret cannot be blank");
